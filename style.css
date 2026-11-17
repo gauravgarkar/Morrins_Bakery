@@ -1,0 +1,267 @@
+*{
+  margin: 0;
+  padding:0;
+
+}
+.navbar{
+    background-color: rgb(8, 8, 8);
+  align-items: center;
+  display: flex;
+  padding:20px;
+justify-content: space-between;
+  }
+  .nav-links{
+
+    display: flex;
+    
+    padding: 20px ;
+    gap: 20px;
+  }
+
+  .nav-links li{
+
+    
+    list-style: none;
+  }
+  .nav-links li a{
+    position: relative;
+    transition: color 0.25s;
+
+    text-decoration: none;
+    font-size: 35px;
+    color:rgba(245, 233, 241, 0.827);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .nav-links li a:hover{
+  color: rgb(96, 40, 5);
+}
+.nav-links li a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.25s;
+}
+  .Logo{
+    color:rgba(245, 233, 241, 0.827);
+    font-size: 40px;
+  }
+  
+  .about-images{
+
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+    
+  }
+  
+  .sector{
+
+      margin:0;
+      min-height: 100vh;
+      background: #675d5d;
+
+  }
+
+  .sector .About{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+    padding-top: 40px;
+    
+
+  }
+  .about-description{
+
+    font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left:50px;
+    text-align: justify;
+    background: transparent;
+  }
+
+  .about-description h1{
+    text-align: center;
+  }
+
+.sector1{
+  padding: 0;
+  margin: 0;
+  background: #675d5d;
+}
+  .meals{
+ padding: 50px 60px;
+ background: #675d5d;
+  
+  
+}
+
+.meals h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 50px;
+  color: white;
+
+}
+
+.cards
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+}
+
+.card{
+  width: 580px;
+  padding:20px;
+   border-radius: 12px;
+   border: 2px; 
+    max-width: 100%;
+    border-radius: 16px;
+   border: 2px solid rgba(182, 51, 138, 0.3);
+  box-shadow: 0 8px 20px rgba(40, 3, 3, 0.4);
+
+}
+.card img{
+  
+  
+  
+}
+.card h3{
+  margin: 15px 0 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.price{
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #e8e2e2;
+}
+
+.sector2{
+background: #675d5d;
+  
+
+}
+.contact-wrapper{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact{
+  
+  padding: 30px;
+  
+   
+}
+.contact h1{
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  font-size: 40px;
+
+}
+
+.contact, .contact-form{
+
+width: 700px;
+height: 500px;
+max-width: 100%;
+margin-top: 400px;
+padding: 30px;
+border-radius: 12px;
+
+background: rgb(18, 18, 17);
+color: rgba(229, 226, 228, 0.827);
+}
+
+.message{
+  resize: vertical;
+}
+.contact-form button{
+padding: 24px;
+font-size:10px;
+border:none;
+border-radius: 8px;
+background: #2e08a2;
+color: #5c1111;
+cursor: pointer;
+font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+.contact-form button:hover{
+  background: white;
+}
+.contact-form input{
+
+  padding: 30px;
+  margin: auto;
+  background:bisque;
+  
+  justify-content: center;
+}
+
+.sector3{
+  background: #675d5d;
+}
+
+.order{
+  padding: 50px 60px;
+}
+
+.order h1{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.order-box{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgb(18, 18, 17);
+  color: rgba(245, 233, 241, 0.827);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.order-box p{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.order-steps{
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 30px 30px;
+}
+
+.order-btn{
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 22px;
+  border-radius: 8px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.order-btn:hover{
+  background: #1ebe5a;
+}

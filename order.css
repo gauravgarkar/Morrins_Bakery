@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+    display: grid;
+    place-items: center;
+    color: #3d3032;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 12% 18%, #ffdee4 0, transparent 28rem),
+        radial-gradient(circle at 90% 85%, #ffe8d2 0, transparent 30rem),
+        #9f4297;
+}
+
+.order {
+    width: 100%;
+}
+
+.order-now {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: clamp(24px, 5vw, 48px);
+    border: 1px solid #f0dddd;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 22px 65px rgba(102, 48, 58, 0.14);
+}
+
+.brand-link {
+    color: #9f3554;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.order-now h1 {
+    margin: 8px 0 28px;
+    color: #9f3554;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    text-align: center;
+}
+
+.order-now h1::after {
+    display: block;
+    width: 54px;
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 99px;
+    background: #e6a0a9;
+    content: "";
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field > label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.order-now input,
+.order-now textarea,
+.order-now select {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid #e7d5d4;
+    border-radius: 11px;
+    outline: none;
+    color: #3d3032;
+    background: #fffdfc;
+    font: inherit;
+    font-size: 0.98rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.order-now input::placeholder,
+.order-now textarea::placeholder {
+    color: #aa9999;
+}
+
+.order-now input:focus,
+.order-now textarea:focus,
+.order-now select:focus {
+    border-color: #c25775;
+    box-shadow: 0 0 0 4px rgba(194, 87, 117, 0.14);
+}
+
+.order-now textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.order-now select {
+    cursor: pointer;
+}
+
+.bakery-order {
+    margin-top: 28px;
+}
+
+.bakery-order h2,
+.order-summary h2 {
+    margin: 0 0 8px;
+    color: #713343;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+}
+
+.section-intro {
+    margin: 0 0 22px;
+    color: #746568;
+    line-height: 1.5;
+}
+
+.bakery-order fieldset {
+    min-width: 0;
+    margin: 0 0 22px;
+    padding: 0;
+    border: 0;
+}
+
+.bakery-order legend {
+    margin-bottom: 10px;
+    color: #49383c;
+    font-weight: 700;
+}
+
+.cake-choice {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 12px;
+}
+
+.cake-quantity {
+    color: #746568;
+    font-size: 0.86rem;
+}
+
+.cake-quantity input {
+    margin-top: 5px;
+}
+
+.snack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.snack-option {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr) 72px;
+    align-items: center;
+    gap: 9px;
+    min-height: 58px;
+    padding: 9px 11px;
+    border: 1px solid #efdfdf;
+    border-radius: 12px;
+    background: #fffaf9;
+    cursor: pointer;
+}
+
+.order-now .snack-option input[type="checkbox"] {
+    width: 18px;
+    min-height: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    accent-color: #aa3f5c;
+    cursor: pointer;
+}
+
+.snack-option span {
+    font-size: 0.94rem;
+}
+
+.order-now .snack-option .snack-quantity {
+    min-height: 38px;
+    margin: 0;
+    padding: 7px;
+    text-align: center;
+}
+
+.order-now input:disabled {
+    color: #a99b9d;
+    background: #f7f2f1;
+    cursor: not-allowed;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+}
+
+.selection-message {
+    min-height: 1.4em;
+    margin: 0 0 8px;
+    color: #a32f46;
+    font-weight: 600;
+}
+
+#submit {
+    width: 100%;
+    margin: 4px 0 0;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 11px;
+    color: #fff;
+    background: linear-gradient(135deg, #bd4667, #96334f);
+    box-shadow: 0 9px 18px rgba(150, 51, 79, 0.2);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(150, 51, 79, 0.25);
+}
+
+.order-summary {
+    margin-top: 24px;
+    padding: 18px;
+    border: 1px solid #ead1d5;
+    border-radius: 14px;
+    background: #fff8f7;
+}
+
+.order-summary ul {
+    margin: 12px 0;
+    padding-left: 22px;
+    line-height: 1.8;
+}
+
+.summary-note {
+    margin: 0;
+    color: #746568;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    .order-now {
+        border-radius: 18px;
+    }
+
+    .snack-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cake-choice {
+        grid-template-columns: minmax(0, 1fr) 82px;
+        gap: 8px;
+    }
+
+    .snack-option {
+        grid-template-columns: 20px minmax(0, 1fr) 68px;
+    }
+}

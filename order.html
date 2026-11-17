@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now | Morrins</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <main class="order">
+        <section class="order-now">
+            <a class="brand-link" href="index.php">Morrins</a>
+            <h1>Order Now</h1>
+
+            <form id="order-form" action="save_order.php" method="post">
+                <div class="form-field">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="number">Mobile Number</label>
+                    <input type="tel" id="number" name="phone"
+                           placeholder="Enter your mobile number" autocomplete="tel" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address"
+                              placeholder="Enter your address"
+                              autocomplete="street-address" required></textarea>
+                </div>
+
+                <section class="bakery-order">
+                    <h2>Order Bakery Products</h2>
+                    <p class="section-intro">
+                        Choose a cake, snacks, or both. Select more than one snack and set a quantity for each.
+                    </p>
+
+                    <fieldset class="cake-fieldset">
+                        <legend>Cakes</legend>
+
+                        <div class="cake-choice">
+                            <label class="visually-hidden" for="cake">Choose a cake</label>
+                            <select id="cake" name="cake">
+                                <option value="">Choose a cake (optional)</option>
+                                <option value="Chocolate Cake">Chocolate Cake</option>
+                                <option value="Butterscotch Cake">Butterscotch Cake</option>
+                                <option value="Banana Cake">Banana Cake</option>
+                                <option value="Vanilla Cake">Vanilla Cake</option>
+                                <option value="Red Velvet Cake">Red Velvet Cake</option>
+                                <option value="Ice Cream Cake">Ice Cream Cake</option>
+                            </select>
+
+                            <label class="cake-quantity" for="cake-quantity">
+                                Qty
+                                <input type="number" id="cake-quantity"
+                                       name="cake_quantity" min="1" value="1" disabled>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="snack-fieldset">
+                        <legend>Bakery snacks</legend>
+
+                        <div class="snack-grid">
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Vegetable Puff">
+                                <span>Vegetable Puff</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_vegetable_puff" min="1" value="1"
+                                       disabled aria-label="Vegetable Puff quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Egg Puff">
+                                <span>Egg Puff</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_egg_puff" min="1" value="1"
+                                       disabled aria-label="Egg Puff quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Chicken Puff">
+                                <span>Chicken Puff</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_chicken_puff" min="1" value="1"
+                                       disabled aria-label="Chicken Puff quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Vegetable Samosa">
+                                <span>Vegetable Samosa</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_vegetable_samosa" min="1" value="1"
+                                       disabled aria-label="Vegetable Samosa quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Chicken Roll">
+                                <span>Chicken Roll</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_chicken_roll" min="1" value="1"
+                                       disabled aria-label="Chicken Roll quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Vegetable Cutlet">
+                                <span>Vegetable Cutlet</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_vegetable_cutlet" min="1" value="1"
+                                       disabled aria-label="Vegetable Cutlet quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Vegetable Sandwich">
+                                <span>Vegetable Sandwich</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_vegetable_sandwich" min="1" value="1"
+                                       disabled aria-label="Vegetable Sandwich quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Chicken Sandwich">
+                                <span>Chicken Sandwich</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_chicken_sandwich" min="1" value="1"
+                                       disabled aria-label="Chicken Sandwich quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Donut">
+                                <span>Donut</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_donut" min="1" value="1"
+                                       disabled aria-label="Donut quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Muffin">
+                                <span>Muffin</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_muffin" min="1" value="1"
+                                       disabled aria-label="Muffin quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Brownie">
+                                <span>Brownie</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_brownie" min="1" value="1"
+                                       disabled aria-label="Brownie quantity">
+                            </label>
+
+                            <label class="snack-option">
+                                <input type="checkbox" name="snacks[]" value="Cookies">
+                                <span>Cookies</span>
+                                <input class="snack-quantity" type="number"
+                                       name="qty_cookies" min="1" value="1"
+                                       disabled aria-label="Cookies quantity">
+                            </label>
+                        </div>
+                    </fieldset>
+                </section>
+
+                <p id="selection-message" class="selection-message"
+                   role="status" aria-live="polite"></p>
+
+                <button type="button" id="submit">Review Order</button>
+                <button type="submit" id="place-order">Place Order</button>
+            </form>
+
+            <section id="order-summary" class="order-summary"
+                     aria-labelledby="summary-title" aria-live="polite" hidden>
+                <h2 id="summary-title">Your order selection</h2>
+                <ul id="summary-items"></ul>
+                <p class="summary-note">This is a preview of your selections.</p>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        const cakeSelect = document.querySelector("#cake");
+        const cakeQuantity = document.querySelector("#cake-quantity");
+        const snackOptions = document.querySelectorAll(".snack-option");
+        const orderForm = document.querySelector("#order-form");
+        const summary = document.querySelector("#order-summary");
+        const summaryItems = document.querySelector("#summary-items");
+        const selectionMessage = document.querySelector("#selection-message");
+
+        cakeSelect.addEventListener("change", () => {
+            cakeQuantity.disabled = !cakeSelect.value;
+        });
+
+        snackOptions.forEach((option) => {
+            const checkbox = option.querySelector('input[type="checkbox"]');
+            const quantity = option.querySelector(".snack-quantity");
+
+            checkbox.addEventListener("change", () => {
+                quantity.disabled = !checkbox.checked;
+            });
+        });
+
+        document.querySelector("#submit").addEventListener("click", () => {
+            selectionMessage.textContent = "";
+
+            if (!orderForm.reportValidity()) {
+                return;
+            }
+
+            const selectedItems = [];
+
+            if (cakeSelect.value) {
+                selectedItems.push({
+                    name: cakeSelect.value,
+                    quantity: cakeQuantity.value
+                });
+            }
+
+            snackOptions.forEach((option) => {
+                const checkbox = option.querySelector('input[type="checkbox"]');
+
+                if (checkbox.checked) {
+                    selectedItems.push({
+                        name: checkbox.value,
+                        quantity: option.querySelector(".snack-quantity").value
+                    });
+                }
+            });
+
+            if (selectedItems.length === 0) {
+                selectionMessage.textContent =
+                    "Please choose a cake or at least one snack.";
+                return;
+            }
+
+            summaryItems.replaceChildren();
+
+            selectedItems.forEach((item) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = item.name + " — " + item.quantity;
+                summaryItems.appendChild(listItem);
+            });
+
+            summary.hidden = false;
+            summary.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact form submissions</h2>
+      <p id="submissionCount">0 submissions</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+
+        <tbody id="submissionRows">
+          <tr>
+            <td colspan="4">No submissions yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="admin.js" defer></script>
+</body>
+</html>

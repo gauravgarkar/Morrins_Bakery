@@ -1,5 +1,5 @@
 <?php
 return [
-    'username' => 'morrins202002@gmail.com',
-    'app_password' => 'gzujbwvzaifsdwqc'
+    'username' => getenv('MORRINS_SMTP_USERNAME') ?: '',
+    'app_password' => getenv('MORRINS_SMTP_PASSWORD') ?: '',
 ];
